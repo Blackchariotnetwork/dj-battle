@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #08090d;
+    color: #f3f4f6;
+    overflow-x: hidden;
+  }
+
+  /* Monospace font for telemetry, BPM, timers, and VU values */
+  .font-mono-numbers {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Vinyl rotation animation */
+@keyframes spin-vinyl {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-vinyl-spin {
+  animation: spin-vinyl 1.8s linear infinite;
+}
+
+.animate-vinyl-spin-fast {
+  animation: spin-vinyl 1.2s linear infinite;
+}
+
+.animate-vinyl-spin-slow {
+  animation: spin-vinyl 2.4s linear infinite;
+}
+
+/* Turntable vinyl grooved texture effect */
+.vinyl-grooves {
+  background: radial-gradient(
+    circle at 50% 50%,
+    #181a20 0%,
+    #121318 8%,
+    #1a1c24 9%,
+    #111217 14%,
+    #1d2028 15%,
+    #13141a 22%,
+    #21242e 23%,
+    #14161d 30%,
+    #252934 31%,
+    #161820 40%,
+    #2a2e3b 41%,
+    #171922 52%,
+    #303544 53%,
+    #181a24 65%,
+    #363c4d 66%,
+    #121319 82%,
+    #0c0d12 100%
+  );
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.9), 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+/* Metallic vinyl reflection sheen */
+.vinyl-sheen {
+  background: conic-gradient(
+    from 45deg at 50% 50%,
+    rgba(255, 255, 255, 0.08) 0deg,
+    transparent 60deg,
+    rgba(255, 255, 255, 0.08) 120deg,
+    transparent 180deg,
+    rgba(255, 255, 255, 0.08) 240deg,
+    transparent 300deg,
+    rgba(255, 255, 255, 0.08) 360deg
+  );
+}
+
+/* Mixer metal brushed chassis */
+.mixer-plate {
+  background: linear-gradient(180deg, #161820 0%, #101217 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Custom vertical fader slider styling */
+input[type=range].fader-vertical {
+  writing-mode: vertical-lr;
+  direction: rtl;
+  appearance: slider-vertical;
+  width: 28px;
+  cursor: pointer;
+}
+
+/* Glowing LED VU effect */
+.led-active-green {
+  background-color: #22c55e;
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.7);
+}
+
+.led-active-amber {
+  background-color: #f59e0b;
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.8);
+}
+
+.led-active-red {
+  background-color: #ef4444;
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.9);
+}

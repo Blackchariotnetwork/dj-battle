@@ -1,0 +1,6 @@
+{
+  "name": "Crossfader Battle - DJ Clash Arena",
+  "description": "Step into the arena and battle head-to-head in real-time DJ clashes with authentic vinyl scratching, drum pads, live audio filters, crossfader duels, and crowd hype judging.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
